@@ -1,0 +1,610 @@
+
+#root
+{
+  height: 100%;
+  width: 100%; 
+  display: contents;	
+	margin: 0%;
+  
+}
+body,html {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  background: rgb(2,0,36);
+ 
+}
+.todohead{
+	height: 20%;
+	width: 100%;
+	font-size: 30px;
+  text-align: center;
+  background: #CF27BE;
+  background: #8025F7;
+  background: linear-gradient(to right, #8025F7 0%, #FF63BC 50%, #3E2182 100%);
+  -webkit-background-clip: text;
+	display: flow-root;
+ 
+}
+#form{
+  height: 20%;
+  width:100%;
+}
+
+.App{
+  height: 88%;
+  width: 44%;	
+  color: deeppink;
+  background-color:rgb(51, 51, 45);
+  border-radius: 5%;
+ 
+}
+
+
+
+/* .openbtn
+{
+	background: #34d9aa;
+  background-image: -webkit-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -moz-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -ms-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -o-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: linear-gradient(to bottom, #34d9aa, #b950c7);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+	border: none;
+  margin-left: 4%;
+} */
+/* .openbtn:hover{
+	 background: #661173;
+  background-image: -webkit-linear-gradient(top, #661173, #c75fb7);
+  background-image: -moz-linear-gradient(top, #661173, #c75fb7);
+  background-image: -ms-linear-gradient(top, #661173, #c75fb7);
+  background-image: -o-linear-gradient(top, #661173, #c75fb7);
+  background-image: linear-gradient(to bottom, #661173, #c75fb7);
+  text-decoration: none;
+} */
+
+.input {
+  
+  color: rgb(45, 57, 83);
+  font-size: 20px;
+  padding: 15px;
+  display: block;
+  height: 46%;
+  width: 83%;
+  outline: none;
+  margin-left: 4%;
+  border-radius: 33px;
+}
+
+
+.input::placeholder {
+ 
+  font-style: italic;
+}
+
+#errormsg {
+  color:red;
+  height: 10px;
+  width:100%;
+  padding:10px;
+  margin-left: 3%;
+
+}
+#add
+{
+  align-content: center;
+  width: 19%;
+  height: 10%;
+  cursor: pointer;
+  margin-left: 73%;  
+  background: #34d9aa;
+  background-image: -webkit-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -moz-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -ms-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -o-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: linear-gradient(to bottom, #34d9aa, #b950c7);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+	border: none;
+}
+#add:hover{
+	background: #661173;
+  background-image: -webkit-linear-gradient(top, #661173, #c75fb7);
+  background-image: -moz-linear-gradient(top, #661173, #c75fb7);
+  background-image: -ms-linear-gradient(top, #661173, #c75fb7);
+  background-image: -o-linear-gradient(top, #661173, #c75fb7);
+  background-image: linear-gradient(to bottom, #661173, #c75fb7);
+  text-decoration: none;
+ 
+}
+
+.filter-todo {
+  height: 10%;
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+ 
+}
+.edit-todo-input{
+  width: 94%;
+  height: 95%;
+	color:deeppink;
+  font-size: 1rem;
+  position: relative;
+  display: flex;  
+  outline: 5px auto;  
+}
+
+.fulltodolist{
+  height: 100%;
+  position:relative;
+}
+.fulltodolist2{
+    height: 79%;
+    overflow-y:auto; 
+    position:relative;
+
+
+}
+.todos {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;  
+  width: 100%;
+  height:auto;
+  overflow-y: auto;
+}
+.todo-item {
+  width: 60%;
+  height: 40%;
+}
+
+.todos li {
+  border-top: 1px solid #e5e5e5;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  position: relative;
+  display: flex;
+  word-wrap: break-word;
+  align-items: center;
+}
+
+.todos li.completed {
+  color: #b6b6b6;
+  
+}
+
+.complete-btn{
+  height:100%;
+  width:27%;
+  margin-right:69px;
+  cursor:not-allowed;
+  background: #34d9aa;
+  background-image: -webkit-linear-gradient(top, #99cebf, #dfbde4);
+  background-image: -moz-linear-gradient(top, #99cebf, #dfbde4);
+  background-image: -ms-linear-gradient(top, #99cebf, #dfbde4);
+  background-image: -o-linear-gradient(top, #99cebf, #dfbde4);
+  background-image: linear-gradient(to bottom,#99cebf, #dfbde4);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+    padding: 6px 12px 8px 15px;
+  text-decoration: none;
+	border: none;
+}
+.complete-btn:edit-btn{
+  height:100%;
+  width:37%;
+  margin-right:69px;
+  cursor:not-allowed;
+  background: #34d9aa;
+  background-image: -webkit-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -moz-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -ms-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -o-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: linear-gradient(to bottom, #34d9aa, #b950c7);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+    padding: 6px 12px 8px 15px;
+  text-decoration: none;
+	border: none;
+}
+
+.uncomplete-btn{
+  height:100%;
+  width:27%;
+  margin-right:69px;
+  background: #34d9aa;
+  background-image: -webkit-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -moz-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -ms-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: -o-linear-gradient(top, #34d9aa, #b950c7);
+  background-image: linear-gradient(to bottom, #34d9aa, #b950c7);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+    padding: 6px 12px 8px 15px;
+	border: none;
+}
+
+
+
+.edit-btn {
+  position: absolute;
+  right: 3rem;
+  border: none;
+  align-self: center;
+  background-color: transparent;
+  color: rgba(197, 25, 62, 0.829);
+  cursor: pointer;
+}
+.not-edit{
+  position: absolute;
+  right: 3rem;
+  border: none;
+  align-self: center;
+  background-color: transparent;
+  color: rgba(182, 135, 145, 0.829);
+  cursor: not-allowed;
+}
+
+
+.destroy-btn {
+  position: absolute;
+  right: 1rem;
+  align-self: center;
+  border: none;
+  background-color: transparent;
+  color:rgba(197, 25, 62, 0.829);
+  cursor: pointer;
+}
+
+/* media query */
+@media only screen and (max-width: 480px) and (min-width:320px) {
+  body {
+  height : 100%;
+  width :100%;
+  }
+  .todohead{
+    height: 20%;
+    width: 100%;
+    font-size: medium;
+  }
+  .App{
+    height: 45%;
+    width: 80%;
+  }
+  .input{
+    height:20%;
+    width:80%;
+  }
+  .edit-todo-input{
+    height: 20%;
+    width:40%;
+  }
+  #add
+{
+  height: 20%;
+  width: 23%;
+  }
+  .edit-todo-input{
+    height: 30%;
+    width: 63%;
+
+  }
+
+.todo-item {
+  width: 60%;
+  height: 30%;
+}
+.complete-btn{
+  height: 20%;
+  width:42%;
+}
+.uncomplete-btn{
+  height: 20%;
+  width:42%;
+}
+
+.filter-todo{
+  height: 10%;
+    width: 90%;
+
+}
+}
+
+@media only screen and (max-width: 1024px) {
+
+  body {
+    height : 100%;
+    width :82%;
+    }
+    .todohead{
+      height: 20%;
+      width: 100%;
+      font-size: 20px;
+    }
+    .App{
+      height: 45%;
+      width: 80%;
+    }
+    .input{
+      height:20%;
+      width:80%;
+      font-size: 14px;
+    }
+    .edit-todo-input{
+      height: 20%;
+      width:40%;
+    }
+    #add
+  {
+    height: 20%;
+    width: 18%;
+    font-size: 14px;
+    }
+    
+    .edit-todo-input{
+      height: 30%;
+      width: 63%;
+  
+    }
+  
+  .todo-item {
+    width: 60%;
+    height: 30%;
+    font-size: 26px;
+  }
+  .complete-btn{
+    height: 20%;
+    width:27%;
+    font-size: 11px;
+  }
+  .uncomplete-btn{
+    height: 20%;
+    width:27%;
+    font-size: 11px;
+  }
+  
+  .filter-todo{
+    height: 5%;
+    width: 90%;
+    font-size: 25px;
+  
+  }
+  .fulltodolist{
+    height: 100%;
+    width:100%;
+  }
+
+}
+@media only screen and (max-width: 516px)  and (min-width:150px){
+
+  body {
+    height : 100%;
+    width :100%;
+    }
+    .todohead{
+      height: 20%;
+      width: 100%;
+      font-size: 14px;
+    }
+    .App{
+      height: 45%;
+      width: 80%;
+    }
+    .input{
+      height:20%;
+      width:70%;
+      font-size: 18px;
+    }
+    .edit-todo-input{
+      height: 20%;
+      width:100%;
+    }
+    #add
+  {
+    height: 20%;
+    width: 24%;
+    font-size: 18px;
+    }
+    
+    .edit-todo-input{
+      height: 30%;
+      width: 63%;
+  
+    }
+  
+  .todo-item {
+    width: 30%;
+    height: 30%;
+    font-size: 18px;
+  }
+  .complete-btn{
+    height: 20%;
+    width: 42%;
+    font-size: 11px;
+  }
+  .uncomplete-btn{
+    height: 20%;
+    width: 42%;
+    font-size: 11px;
+  }
+  
+  .filter-todo{
+    height: 3px;
+    width: 86%;
+    font-size: 18px;
+  }
+  .fulltodolist{
+    height: 100%;
+    width:100%;
+  }
+
+}
+@media only screen and (max-width: 653px)  and (min-width:280px){
+  body {
+    height : 100%;
+    width :100%;
+    }
+    .todohead{
+      height: 20%;
+      width: 100%;
+      font-size: medium;
+    }
+    .App{
+      height: 45%;
+      width: 80%;
+    }
+    .input{
+      height:20%;
+      width:70%;
+      font-size: 14px;
+    }
+    .edit-todo-input{
+      height: 20%;
+      width:100%;
+    }
+    #add
+   {
+    height: 20%;
+    width: 24%;
+    font-size: 14px;
+    }
+    
+    .edit-todo-input
+    {
+      height: 30%;
+      width: 63%;
+  
+    }
+    
+  
+  .todo-item {
+    width: 30%;
+    height: 30%;
+    font-size: 14px;
+  }
+  .complete-btn{
+    height: 20%;
+    width: 42%;
+    font-size: 8px;
+  }
+  .uncomplete-btn{
+    height: 20%;
+    width: 42%;
+    font-size: 8px;
+  }
+  
+  .filter-todo{
+    height: 3px;
+    width: 86%;
+    font-size: 14px;
+  }
+  .fulltodolist{
+    height: 100%;
+    width:100%;
+  }
+  
+
+}
+
+@media only screen and (max-width: 320px)  and (min-width:480px){
+  body {
+    height : 100%;
+    width :100%;
+    }
+    .todohead{
+      height: 20%;
+      width: 100%;
+      font-size: medium;
+    }
+    .App{
+      height: 45%;
+      width: 80%;
+    }
+    .input{
+      height:20%;
+      width:70%;
+      font-size: 14px;
+    }
+    .edit-todo-input{
+      height: 20%;
+      width:100%;
+    }
+    #add
+  {
+    height: 20%;
+    width: 24%;
+    font-size: 14px;
+    }
+    
+    .edit-todo-input{
+      height: 30%;
+      width: 63%;
+  
+    }
+    
+  
+  .todo-item {
+    width: 30%;
+    height: 30%;
+    font-size: 14px;
+  }
+  .complete-btn{
+    height: 20%;
+    width: 42%;
+    font-size: 11px;
+  }
+  .uncomplete-btn{
+    height: 20%;
+    width: 42%;
+    font-size: 11px;
+  }
+  
+  .filter-todo{
+    height: 3px;
+    width: 86%;
+    font-size: 14px;
+  }
+  .fulltodolist{
+    height: 100%;
+    width:100%;
+  }
+  
+
+}
+
